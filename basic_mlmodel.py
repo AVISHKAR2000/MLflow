@@ -1,14 +1,13 @@
 import pandas as pd 
 import numpy as np
 import os
-
 import mlflow
 import mlflow.sklearn
 
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import ElasticNet
 
-from sklearn.metrics import mean_absolute_error,mean_squared_error,r2_score,accuracy_score
+from sklearn.metrics import mean_absolute_error,mean_squared_error,r2_score,accuracy_score,roc_auc_score
 from sklearn.model_selection import train_test_split
 
 import argparse
@@ -24,7 +23,7 @@ def get_data():
     except Exception as e:
         raise e
 
-def evaluate(y_true,y_pred):
+def evaluate(y_true,y_pred,pred_prob):
     '''
     mae=mean_absolute_error(y_true,y_pred)
     mse=mean_squared_error(y_true,y_pred)
@@ -32,15 +31,17 @@ def evaluate(y_true,y_pred):
     r2=r2_score(y_true,y_pred)
     return mae,mse,rmse,r2
     '''
-    accuracy=accuracy_score(y_true,y_pred)
-    return accuracy
+    acc=accuracy_score(y_true,y_pred)
+    rc_score=roc_auc_score(y_true,pred_prob,multi_class="ovr")
+    return acc,rc_score
 def main(n_estimators,max_depth):
     df=get_data()
     train,test=train_test_split(df)
     x_train=train.drop(['quality'],axis=1)
     x_test=test.drop(['quality'],axis=1)
     y_train=train[['quality']]
-    y_test=test[['quality']]
+    y_test=test[['quality']] 
+    
 
      #model training
     '''
@@ -48,17 +49,31 @@ def main(n_estimators,max_depth):
     lr.fit(x_train,y_train)
     pred=lr.predict(x_test)
     '''   
-    rf=RandomForestClassifier(n_estimators=n_estimators,max_depth=max_depth)
-    rf.fit(x_train,y_train)
-    pred=rf.predict(x_test)
+    with mlflow.start_run():
+        rf=RandomForestClassifier(n_estimators=n_estimators,max_depth=max_depth)
+        rf.fit(x_train,y_train)
+        pred=rf.predict(x_test)
 
-    #evaluate model
-    '''
-    mae,mse,rmse,r2=evaluate(y_test,pred)
-    print(f"mean_absolute_error:{mae},mean_squared_error:{mse},root mean square error:{rmse},r square:{r2}")
-    '''
-    accuracy=evaluate(y_test,pred)
-    print(f"accuracy using random forest is:{accuracy}")
+        pred_prob=rf.predict_proba(x_test)
+
+        #evaluate model
+        '''
+        mae,mse,rmse,r2=evaluate(y_test,pred)
+        print(f"mean_absolute_error:{mae},mean_squared_error:{mse},root mean square error:{rmse},r square:{r2}")
+        '''
+        acc,rc_score=evaluate(y_test,pred,pred_prob)
+
+        mlflow.log_param("n_stimators",n_estimators)
+        mlflow.log_param("max_depth",max_depth)
+
+        mlflow.log_metric("accuracy",acc)
+        mlflow.log_metric("accuracy",rc_score)
+
+        #mlflow model logging
+        mlflow.sklearn.log_model(rf,"randomforestmodel")
+
+        print(f"accuracyis {acc},roc_auc_score is {rc_score}")
+        
 
 if __name__=="__main__":
     args=argparse.ArgumentParser()

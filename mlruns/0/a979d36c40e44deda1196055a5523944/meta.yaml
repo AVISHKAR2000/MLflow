@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Avishkar/mlflow/mlruns/0/a979d36c40e44deda1196055a5523944/artifacts
+end_time: 1698279517947
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: a979d36c40e44deda1196055a5523944
+run_name: serious-snake-794
+run_uuid: a979d36c40e44deda1196055a5523944
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1698279499899
+status: 3
+tags: []
+user_id: Avishkar

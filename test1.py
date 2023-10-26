@@ -1,3 +1,5 @@
+# this code is used when we want to pass anything directly from command line. 
+
 import argparse
 
 
