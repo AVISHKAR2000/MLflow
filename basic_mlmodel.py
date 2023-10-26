@@ -67,7 +67,7 @@ def main(n_estimators,max_depth):
         mlflow.log_param("max_depth",max_depth)
 
         mlflow.log_metric("accuracy",acc)
-        mlflow.log_metric("accuracy",rc_score)
+        mlflow.log_metric("roc_auc_score",rc_score)
 
         #mlflow model logging
         mlflow.sklearn.log_model(rf,"randomforestmodel")

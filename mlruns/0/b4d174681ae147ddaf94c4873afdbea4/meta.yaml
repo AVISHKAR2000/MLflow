@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Avishkar/mlflow/mlruns/0/b4d174681ae147ddaf94c4873afdbea4/artifacts
+end_time: 1698280503621
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b4d174681ae147ddaf94c4873afdbea4
+run_name: defiant-bird-264
+run_uuid: b4d174681ae147ddaf94c4873afdbea4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1698280494984
+status: 3
+tags: []
+user_id: Avishkar

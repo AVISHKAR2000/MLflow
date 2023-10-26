@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Avishkar/mlflow/mlruns/0/0c4d305e4d1f47a6b1e689eb045ad5a0/artifacts
+end_time: 1698280377533
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 0c4d305e4d1f47a6b1e689eb045ad5a0
+run_name: bittersweet-carp-87
+run_uuid: 0c4d305e4d1f47a6b1e689eb045ad5a0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1698280374392
+status: 4
+tags: []
+user_id: Avishkar

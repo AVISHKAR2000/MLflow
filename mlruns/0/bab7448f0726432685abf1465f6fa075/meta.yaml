@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Avishkar/mlflow/mlruns/0/bab7448f0726432685abf1465f6fa075/artifacts
+end_time: 1698280811303
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: bab7448f0726432685abf1465f6fa075
+run_name: useful-snipe-275
+run_uuid: bab7448f0726432685abf1465f6fa075
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1698280802891
+status: 3
+tags: []
+user_id: Avishkar

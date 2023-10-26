@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Avishkar/mlflow/mlruns/0/f1b344f5334648aca4d3a57a0d3d35c0/artifacts
+end_time: 1698281609003
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f1b344f5334648aca4d3a57a0d3d35c0
+run_name: popular-bat-194
+run_uuid: f1b344f5334648aca4d3a57a0d3d35c0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1698281596520
+status: 3
+tags: []
+user_id: Avishkar

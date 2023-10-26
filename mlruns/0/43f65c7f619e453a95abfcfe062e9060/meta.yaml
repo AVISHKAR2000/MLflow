@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Avishkar/mlflow/mlruns/0/43f65c7f619e453a95abfcfe062e9060/artifacts
+end_time: 1698281557571
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 43f65c7f619e453a95abfcfe062e9060
+run_name: polite-mouse-632
+run_uuid: 43f65c7f619e453a95abfcfe062e9060
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1698281549354
+status: 3
+tags: []
+user_id: Avishkar

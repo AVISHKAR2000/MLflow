@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Avishkar/mlflow/mlruns/0/dd53a696586845558e43b6a840fc582a/artifacts
+end_time: 1698281571565
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: dd53a696586845558e43b6a840fc582a
+run_name: placid-steed-926
+run_uuid: dd53a696586845558e43b6a840fc582a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1698281564596
+status: 3
+tags: []
+user_id: Avishkar

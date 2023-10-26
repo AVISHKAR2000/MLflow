@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Avishkar/mlflow/mlruns/0/be468a6c41174835a15ff87500324244/artifacts
+end_time: 1698281542293
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: be468a6c41174835a15ff87500324244
+run_name: spiffy-cow-296
+run_uuid: be468a6c41174835a15ff87500324244
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1698281534011
+status: 3
+tags: []
+user_id: Avishkar
